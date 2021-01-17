@@ -3,7 +3,7 @@
     "description": "Bootstrap Helpers for CakePHP 3.0",
     "keywords": ["CakePHP", "Bootstrap"],
     "license": "MIT",
-    "type": "cakephp-plugin",
+    "type": "library",
     "require": {
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.7.0"
