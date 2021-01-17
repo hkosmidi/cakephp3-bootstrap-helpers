@@ -87,4 +87,53 @@ class DateTimeWidget extends \Cake\View\Widget\DateTimeWidget {
         return parent::render($data, $context);
     }
 
+    /**
+     * Normalize data.
+     *
+     * @param array $data Data to normalize.
+     *
+     * @return array Normalized data.
+     */
+    protected function _normalizeData($data)
+    {
+        $data += [
+            'name' => '',
+            'empty' => false,
+            'disabled' => null,
+            'val' => null,
+            'year' => [],
+            'month' => [],
+            'day' => [],
+            'hour' => [],
+            'minute' => [],
+            'second' => [],
+            'meridian' => null,
+            'templateVars' => [],
+        ];
+
+        $timeFormat = isset($data['hour']['format']) ? $data['hour']['format'] : null;
+        if ($timeFormat === 12 && !isset($data['meridian'])) {
+            $data['meridian'] = [];
+        }
+        if ($timeFormat === 24) {
+            $data['meridian'] = false;
+        }
+
+        return $data;
+    }
+
+    /**      * List of inputs that can be rendered
+     *
+     * @var string[]
+     */
+    protected $_selects = [
+        'year',
+        'month',
+        'day',
+        'hour',
+        'minute',
+        'second',
+        'meridian',
+    ];
+
 };
