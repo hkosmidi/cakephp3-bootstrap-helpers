@@ -138,7 +138,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
     /**
      * {@inheritDoc}
      */
-    public function link($title, $url = null, array $options = []):string {
+    public function link(array|string $title, array|string|null $url = null, array $options = []): string {
         list($options, $easyIcon) = $this->_easyIconOption($options);
         return $this->_injectIcon(parent::link($title, $url, $options), $easyIcon);
     }
@@ -207,15 +207,6 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
         ]);
     }
 
-
-    /**
-     * @deprecated 3.3.6 (CakePHP) Use the BreadcrumbsHelper instead.
-     */
-    public function getCrumbList(array $options = [], $startText = false) {
-        $options['separator'] = '';
-        $options = $this->addClass($options, 'breadcrumb');
-        return parent::getCrumbList($options, $startText);
-    }
 
     /**
      * Create a Twitter Bootstrap style alert block, containing text.
