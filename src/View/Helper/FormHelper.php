@@ -139,7 +139,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var array
      */
-    protected $_defaultWidgets = [
+    protected array $_defaultWidgets = [
         '_default' => ['Cake\View\Widget\BasicWidget'],
         'button' => ['Cake\View\Widget\ButtonWidget'],
         'checkbox' => ['Cake\View\Widget\CheckboxWidget'],
@@ -162,7 +162,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var bool
      */
-    public $horizontal = false;
+    public bool $horizontal = false;
 
     /**
      * Indicates if inline mode is enabled.
