@@ -229,7 +229,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper {
         $before = (is_int($options['first']) && $options['first'] > 1) ? $prev.$first : $first.$prev;
         $after  = (is_int($options['last']) && $options['last'] > 1) ? $last.$next : $next.$last;
 
-        $options['before'] = $options['before'].$before;;
+        $options['before'] .= $before;;
         $options['after']  = $after.$options['after'];
 
         // New options used to allow the _getNumbersStartAndEnd method to work correctly without having

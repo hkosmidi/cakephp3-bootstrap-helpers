@@ -497,7 +497,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
         $rowsHtml = '<div class="row">';
 
         $count = 1;
-        foreach ($data as $index => $colData) {
+        foreach ($data as $colData) {
             $rowsHtml .= $determineContent($colData);
 
             if ($count % $breakIndex === 0) {
