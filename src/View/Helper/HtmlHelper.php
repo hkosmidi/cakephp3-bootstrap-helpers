@@ -41,7 +41,7 @@ class HtmlHelper extends \Cake\View\Helper\HtmlHelper {
      *
      * @var array
      */
-    protected $_defaultConfig = [
+    protected array $_defaultConfig = [
         'templates' => [
             'meta' => '<meta{{attrs}}/>',
             'metalink' => '<link href="{{url}}"{{attrs}}/>',

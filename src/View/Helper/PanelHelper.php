@@ -48,7 +48,7 @@ class PanelHelper extends Helper {
      *
      * @var array
      */
-    protected $_defaultConfig = [
+    protected array $_defaultConfig = [
         'templates' => [
             'panelGroupStart' => '<div class="panel-group{{attrs.class}}" role="tablist" aria-multiselectable="true"{{attrs}}>',
             'panelGroupEnd' => '</div>',

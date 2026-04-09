@@ -56,7 +56,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var array
      */
-    protected $_defaultConfig = [
+    protected array $_defaultConfig = [
         'idPrefix' => null,
         'errorClass' => 'has-error',
         'typeMap' => [

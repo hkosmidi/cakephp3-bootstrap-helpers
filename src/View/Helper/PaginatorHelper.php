@@ -56,7 +56,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper {
      *
      * @var array
      */
-    protected $_defaultConfig = [
+    protected array $_defaultConfig = [
         'options' => [],
         'templates' => [
             'nextActive' => '<li><a href="{{url}}">{{text}}</a></li>',
