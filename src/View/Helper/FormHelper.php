@@ -187,7 +187,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
                     'errorColumnClass' => $this->_getColumnClass('error'),
                     'inputColumnOffsetClass' => $this->_getColumnClass('label', true),
                 ];
-                if (!$that->getTemplates($data['templateName'])) {
+                if (!$that->getTemplate($data['templateName'])) {
                     $data['templateName'] = $name;
                 }
                 return $data;
