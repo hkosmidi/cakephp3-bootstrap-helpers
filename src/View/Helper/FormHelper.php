@@ -38,7 +38,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var array
      */
-    public array $helpers = [
+    public $helpers = [
         'Url', 'Html'
     ];
 
@@ -56,7 +56,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var array
      */
-    protected array $_defaultConfig = [
+    protected $_defaultConfig = [
         'idPrefix' => null,
         'errorClass' => 'has-error',
         'typeMap' => [
@@ -139,7 +139,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper {
      *
      * @var array
      */
-    protected array $_defaultWidgets = [
+    protected $_defaultWidgets = [
         '_default' => ['Cake\View\Widget\BasicWidget'],
         'button' => ['Cake\View\Widget\ButtonWidget'],
         'checkbox' => ['Cake\View\Widget\CheckboxWidget'],

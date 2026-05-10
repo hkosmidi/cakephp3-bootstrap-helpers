@@ -41,7 +41,7 @@ class HtmlHelper extends \Cake\View\Helper\HtmlHelper {
      *
      * @var array
      */
-    protected array $_defaultConfig = [
+    protected $_defaultConfig = [
         'templates' => [
             'meta' => '<meta{{attrs}}/>',
             'metalink' => '<link href="{{url}}"{{attrs}}/>',
@@ -138,7 +138,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
     /**
      * {@inheritDoc}
      */
-    public function link(array|string $title, array|string|null $url = null, array $options = []): string {
+    public function link($title, $url = null, array $options = []): string {
         list($options, $easyIcon) = $this->_easyIconOption($options);
         return $this->_injectIcon(parent::link($title, $url, $options), $easyIcon);
     }
